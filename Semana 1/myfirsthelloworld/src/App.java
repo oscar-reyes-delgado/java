@@ -16,9 +16,14 @@ public class App {
         System.out.println("no se va a completar hasta que ingreses");
         System.out.println("un numero valido.");
         do{
+           try{
             System.out.print("Escribe tu edad: ");
-            edad = scanner.nextInt();}
-        while(edad >0 & edad <100);
+            edad = scanner.nextInt();
+           }catch(java.util.InputMismatchException e){
+            System.out.println("Intenta de nuevo");
+            System.out.println();
+           }}
+        while(edad > 0 & edad <100);
         return edad;
     }
 
