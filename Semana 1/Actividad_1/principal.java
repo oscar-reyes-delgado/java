@@ -1,7 +1,6 @@
-package Actividad_1;
 import java.util.Scanner;
 
-public class principal{
+public class Principal{
     public static void main(String[] args) {
         System.out.println("==========================");
         System.out.println("   Registro de alumno");
@@ -26,7 +25,7 @@ public class principal{
         String carrera = lector.nextLine();
         System.out.println();
 
-        alumno alumno1  = new alumno(nombre, semestre, matricula, carrera);
+        Alumno alumno1  = new Alumno(nombre, semestre, matricula, carrera);
 
         alumno1.estudiar();
         alumno1.mostrar_credencial();

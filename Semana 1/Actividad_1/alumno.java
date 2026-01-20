@@ -1,12 +1,10 @@
-package Actividad_1;
-
-public class alumno {
+public class Alumno {
     private String nombre;
     private int semestre;
     private String matricula;
     private String carrera;
 
-    public alumno(String nombre, int semestre, String matricula, String carrera){
+    public Alumno(String nombre, int semestre, String matricula, String carrera){
         this.nombre = nombre;
         this.semestre = semestre;
         this.matricula = matricula;
