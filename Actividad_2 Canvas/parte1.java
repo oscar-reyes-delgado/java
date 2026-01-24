@@ -1,9 +1,11 @@
 import java.util.Scanner;
 public class parte1 {
     public static void main(String[] args) {
+        
         Scanner lector = new Scanner(System.in);
         System.out.println("=======================================\nSistema de acceso a oficina de Director\n=======================================");
         System.out.println("Puedes escribir 'salir' para finalizar el programa.");
+
         while(true){
             System.out.print("\nEscribe tu nombre: ");
             String nombre = lector.nextLine();
