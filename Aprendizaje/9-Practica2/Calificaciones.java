@@ -24,8 +24,24 @@ public class Calificaciones {
         }
 
         double promedio = suma / n;
-        mostrarResultado(promedio, mayor, menor);
+        mostrarResultados(promedio, mayor, menor);
+    }
+
+    public static double leerCalificacion(Scanner sc, int num) {
+        double cal;
+        do {
+            System.out.print("Calificacion " + num + ": ");
+            cal = sc.nextDouble();
+        } while (cal < 0 || cal > 100);
+        return cal;
+    }
+
+    public static void mostrarResultados(double promedio, double mayor, double menor) {
+        System.out.println("\n --- Resultados ---");
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Mayor calificacion: " + mayor);
+        System.out.println("Menor calificacion: " + menor);
     }
 }
     
-}
+
