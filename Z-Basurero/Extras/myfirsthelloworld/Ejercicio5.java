@@ -39,7 +39,7 @@ public class Ejercicio5 {
     public static double validacionSuma(Scanner lector){
         try{
             System.out.print("Ingresa el monto vendido: $");
-            double numero = lector.nextInt();
+            double numero = lector.nextDouble();
             if (numero>0){
                 return numero;
             }else{
