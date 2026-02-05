@@ -12,7 +12,7 @@ public class parte2 {
         }
 
         for (int i = 0; i < arreglo.length; i++){
-            System.out.println(arreglo[i]);
+            System.out.print(arreglo[i] + " ");
         }
     }
 }

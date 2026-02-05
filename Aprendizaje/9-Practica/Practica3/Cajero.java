@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import com.sun.source.tree.SwitchTree;
 
 public class Cajero {
     static double saldo = 1000;
