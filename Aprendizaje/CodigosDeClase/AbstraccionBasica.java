@@ -1,4 +1,4 @@
-package CodigosDeClase;
+package Aprendizaje.CodigosDeClase;
 
 // Abstraccion basica
 // Crear clase abstracta (no se puede crear un objeto directamente)

@@ -1,4 +1,4 @@
-package ClasehERENCIA.Ejemplo2;
+package Aprendizaje.CodigosDeClase.ClasehERENCIA.Ejemplo2;
 
 public class Main {
     public static void main(String[] args) {

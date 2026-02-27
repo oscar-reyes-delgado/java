@@ -10,6 +10,6 @@ public class Ejercicio5{
             System.out.println("3. Calcular promedio");
             System.out.println("4. Ver numero de ventas");
             System.out.println("-1. Salir del programa");
-        }while
+        }while(true);
     }
 }

@@ -1,4 +1,4 @@
-package ClasehERENCIA.Ejemplo3;
+package Aprendizaje.CodigosDeClase.ClasehERENCIA.Ejemplo3;
 
 public class Empleado {
     protected String nombre;

@@ -1,4 +1,4 @@
-package ClasehERENCIA.Ejemplo2;
+package Aprendizaje.CodigosDeClase.ClasehERENCIA.Ejemplo2;
 
 public class Animal {
     public void hacerSonido() {

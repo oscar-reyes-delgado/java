@@ -1,7 +1,7 @@
-package RetoFinal;
+package ProyectoFinal;
 
 // 'abstract' impide crear objetos genéricos de "Material". 
-// Obliga a usar las clases hijas como Libro o Revista.
+// Obliga a definir las hijas como Libro o Revista.
 public abstract class Material {
     // Encapsulamiento: Atributos privados para proteger la integridad de los datos.
     private String titulo;

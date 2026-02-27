@@ -1,4 +1,4 @@
-package CodigosDeClase;
+package Aprendizaje.CodigosDeClase;
 public class Persona {
 
     private String nombre;

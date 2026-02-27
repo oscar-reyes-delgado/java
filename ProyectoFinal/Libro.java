@@ -1,4 +1,4 @@
-package RetoFinal;
+package ProyectoFinal;
 
 // 'extends' aplica la Herencia de Material.
 public class Libro extends Material {

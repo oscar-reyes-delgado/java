@@ -1,4 +1,4 @@
-package ClasehERENCIA.Ejemplo1;
+package Aprendizaje.CodigosDeClase.ClasehERENCIA.Ejemplo1;
 // Clasee base o superclase
 public class Vehiculo {
     String marca;
