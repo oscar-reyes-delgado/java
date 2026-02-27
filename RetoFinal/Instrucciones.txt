@@ -1,0 +1,27 @@
+Descripción
+Esta fase consiste en implementar y probar el sistema de gestión de biblioteca, utilizando la programación orientada a objetos (POO). El sistema debe cumplir con los requisitos funcionales y no funcionales especificados en la parte 1, así como aplicar los conceptos fundamentales de la POO, como métodos, clases, herencia y polimorfismo. Para realizar la implementación y prueba del sistema, se deben crear las clases y objetos que lo representen, implementar las relaciones entre ellos, desarrollar el flujo del programa y aplicar las funcionalidades del sistema.
+
+Objetivo
+Finalizar el proyecto de gestión de biblioteca aplicando los conceptos de la POO para, luego, llevar a cabo la implementación del sistema de gestión de manera efectiva.
+
+Instrucciones
+El objetivo de esta segunda fase es implementar y probar el sistema de software diseñado y modelado en la primera parte del proyecto, utilizando un lenguaje de POO; para ello, deberás aplicar los conceptos avanzados de dicho enfoque, como la abstracción, el encapsulamiento, el polimorfismo, la conversión de objetos, entre otros.
+
+Para realizar la implementación y prueba del sistema, debes seguir las siguientes instrucciones:
+
+    Crea las clases y los objetos que representen el sistema, asignando los atributos y los métodos correspondientes.
+    Implementa las relaciones entre las clases y los objetos; para ello, emplea los mecanismos apropiados del lenguaje de programación, como la herencia, el polimorfismo, la conversión de objetos, etcétera.
+    Implementa las funcionalidades del sistema con las estructuras de datos y los operadores adecuados del lenguaje de programación Java, como los arreglos, las cadenas de texto, las estructuras de selección, los bucles de repetición, entre otros.
+    Realiza las pruebas del sistema; con este fin, puedes ejecutar el programa otorgando datos de entrada para examinar los métodos empleados. De manera opcional, se pueden crear casos de prueba y, posteriormente, realizar la depuración de errores, así como asegurar el correcto funcionamiento del sistema de gestión.
+    Documenta la implementación y la prueba del sistema, explicando el código fuente, así como los resultados obtenidos.
+    Elabora una conclusión personal sobre el proceso de crear un sistema de gestión de bibliotecas, donde también expliques el aprendizaje obtenido.
+
+Rubrica
+Considera que tu proyecto se evaluará con esta rúbrica.
+
+Enntregables
+Código fuente comentado, con cada una de las clases, métodos y atributos que permitan el correcto funcionamiento del sistema.
+
+Documento electrónico con los resultados obtenidos y la conclusión personal.
+
+Nota: Debes enviar el o los entregables de esta fase al concluir tu proyecto.
