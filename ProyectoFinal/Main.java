@@ -1,52 +1,92 @@
-package ProyectoFinal;
+package RetoFinal;
+
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
 /**
- * Clase principal donde realizamos las pruebas finales del sistema.
- * En esta versión incluimos todos los materiales de la tabla de pruebas.
+ * Clase principal con Menú Interactivo.
+ * Realizamos la integración de Scanner para controlar el flujo de la biblioteca.
  */
 public class Main {
     public static void main(String[] args) {
-        Biblioteca tecmiLibreria = new Biblioteca();
+        Biblioteca tecmiLibrary = new Biblioteca();
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("--- INICIANDO SISTEMA DE BIBLIOTECA TECMILENIO ---");
+        System.out.println("Cargando base de datos del sistema...");
 
-        // 1. Creación de los 3 libros y la revista (Polimorfismo)
-        // Realizamos la instanciación de todos los objetos de la tabla de pruebas.
+        // 1. Precarga de materiales y usuario (Lo que ya realizamos antes)
         Material libro1 = new Libro("Clean Code", 101, 5, "Robert C. Martin");
         Material libro2 = new Libro("Java POO", 102, 3, "Deitel");
         Material libro3 = new Libro("Design Patterns", 103, 2, "Gang of Four");
         Material revista1 = new Revista("National Geographic", 201, 10, 255);
 
-        // 2. Registro de materiales
-        // Realizamos el registro en el catálogo dinámico de la biblioteca[cite: 160].
-        tecmiLibreria.registrarMaterial(libro1);
-        tecmiLibreria.registrarMaterial(libro2);
-        tecmiLibreria.registrarMaterial(libro3);
-        tecmiLibreria.registrarMaterial(revista1);
+        tecmiLibrary.registrarMaterial(libro1);
+        tecmiLibrary.registrarMaterial(libro2);
+        tecmiLibrary.registrarMaterial(libro3);
+        tecmiLibrary.registrarMaterial(revista1);
         
-        // 3. Registro de Usuario
         Usuario oscar = new Usuario("Oscar Reyes", 7163611);
-        tecmiLibreria.registrarUsuario(oscar);
+        tecmiLibrary.registrarUsuario(oscar);
 
-        // 4. PRUEBA DE REGLAS DE NEGOCIO (Límite de 2 libros)
-        // Realizamos la validación de que el sistema bloquee el tercer préstamo[cite: 153].
-        System.out.println("\n--- Iniciando Pruebas de Préstamo ---");
-        
-        tecmiLibreria.procesarPrestamo(101, 7163611); // OK
-        oscar.recibirMaterial(libro1);
-        
-        tecmiLibreria.procesarPrestamo(102, 7163611); // OK
-        oscar.recibirMaterial(libro2);
-        
-        // Aquí probamos el libro que faltaba (Design Patterns)
-        // El sistema debe decir que ya no hay espacio.
-        tecmiLibreria.procesarPrestamo(103, 7163611); // DEBE FALLAR
+        int opcion = 0;
 
-        // 5. PRUEBA DE CONVERSIÓN DE OBJETOS (CASTING)
-        // Realizamos el casting para demostrar el acceso a métodos específicos[cite: 159].
-        System.out.println("\n--- Probando Conversión de Objetos (Casting) ---");
-        tecmiLibreria.realizarCastingDeLibro(101);
-        
-        System.out.println("\n--- Fin de las pruebas ---");
+        // 2. Ciclo del Menú Principal
+        do {
+            System.out.println("\n=== SMART LIBRARY SYSTEM ===");
+            System.out.println("1. Mostrar todos los detalles (Prueba Polimorfismo)");
+            System.out.println("2. Procesar un Préstamo");
+            System.out.println("3. Buscar Autor de Libro (Prueba Casting)");
+            System.out.println("4. Salir del Sistema");
+            System.out.print("Selecciona una opción: ");
+
+            try {
+                opcion = scanner.nextInt();
+
+                switch (opcion) {
+                    case 1:
+                        System.out.println("\n--- Catálogo Actual ---");
+                        libro1.mostrarDetalles();
+                        libro2.mostrarDetalles();
+                        libro3.mostrarDetalles();
+                        revista1.mostrarDetalles();
+                        break;
+
+                    case 2:
+                        System.out.println("\n--- Módulo de Préstamos ---");
+                        System.out.print("Ingresa el ID del material (ej. 101, 102, 103, 201): ");
+                        int idMat = scanner.nextInt();
+                        // Usamos directamente tu ID para hacer la prueba más ágil
+                        System.out.println("Procesando para el usuario ID: 7163611...");
+                        tecmiLibrary.procesarPrestamo(idMat, 7163611);
+                        
+                        // Lógica sencilla para asignar el material en memoria si el ID coincide
+                        if(idMat == 101) oscar.recibirMaterial(libro1);
+                        else if(idMat == 102) oscar.recibirMaterial(libro2);
+                        else if(idMat == 103) oscar.recibirMaterial(libro3);
+                        else if(idMat == 201) oscar.recibirMaterial(revista1);
+                        break;
+
+                    case 3:
+                        System.out.println("\n--- Módulo de Búsqueda Avanzada ---");
+                        System.out.print("Ingresa el ID del libro para extraer su autor: ");
+                        int idLibro = scanner.nextInt();
+                        tecmiLibrary.realizarCastingDeLibro(idLibro);
+                        break;
+
+                    case 4:
+                        System.out.println("\nCerrando sistema... ¡Hasta luego, " + oscar.getNombre() + "!");
+                        break;
+
+                    default:
+                        System.out.println("\n[!] Opción no válida. Intenta de nuevo.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("\n[!] Error: Debes ingresar un número entero.");
+                scanner.next(); // Limpiamos el error del teclado para que no se cicle
+            }
+
+        } while (opcion != 4);
+
+        scanner.close(); // Siempre es buena práctica cerrar el Scanner al final
     }
 }
