@@ -33,4 +33,34 @@ public class Biblioteca {
             }
         }
     }
+
+    // 1. Busca un usuario y nos lo devuelve para seleccionarlo
+    public Usuario buscarUsuario(int idUsuario) {
+        for (Usuario u : miembros) {
+            if (u.getIdUsuario() == idUsuario) return u;
+        }
+        return null;
+    }
+
+    // 2. Elimina un usuario de la lista
+    public void eliminarUsuario(int idUsuario) {
+        Usuario u = buscarUsuario(idUsuario);
+        if (u != null) {
+            miembros.remove(u);
+            System.out.println("[✓] Usuario eliminado correctamente.");
+        } else {
+            System.out.println("[X] Error: Usuario no encontrado.");
+        }
+    }
+
+    // 3. Imprime todo el catálogo dinámicamente
+    public void mostrarCatalogo() {
+        if (catalogo.isEmpty()) {
+            System.out.println("El catálogo está vacío.");
+            return;
+        }
+        for (Material m : catalogo) {
+            m.mostrarDetalles(); // ¡Polimorfismo en acción!
+        }
+    }
 }
